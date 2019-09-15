@@ -1,1 +1,0 @@
-<button type="button" class="btn btn-primary">Если это кнопка, то бутстрап подсосан</button>
