@@ -1,0 +1,590 @@
+/* стили для мейна*/
+.main {
+  max-width: 960px;
+}
+
+/* меню под шапкой*/
+.nav-container {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: -20px;
+}
+.nav-container .header-nav {
+  margin: 0px auto;
+}
+.header-nav {
+  padding: 10px 0px;
+  z-index: 2;
+}
+.header-nav > ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-nav li {
+  position: relative;
+  margin-right: 5px;
+  padding: 5px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent; 
+  border-radius: 3px; 
+}
+.header-nav a {
+  color: black;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.header-nav span {
+  margin-right: -1px;
+  text-shadow: 0px 0px 1px #444;
+  font-weight: bold;
+}
+.header-nav span:last-of-type {
+  margin-right: 2px;
+}
+.header-nav span:nth-of-type(1) {
+  color: red;
+}
+.header-nav span:nth-of-type(2) {
+  color: #ffff00;
+}
+.header-nav span:nth-of-type(3) {
+  color: #00ff00;
+}
+.header-nav span:nth-of-type(4) {
+  color: #00ffff;
+}
+.header-nav span:nth-of-type(5) {
+  color: #0000ff;
+}
+.header-nav span:nth-of-type(6) {
+  color: #ff00ff;
+}
+.header-nav span:nth-of-type(7) {
+  color: red;
+}
+.header-nav li:hover a {
+  text-decoration: none;
+}
+.header-nav .sub-menu {
+  display: none;
+  width: 180px;
+  position: absolute;
+  left: -2px;
+  top: 15px;
+  list-style: none;
+  padding: 20px 0px 5px;
+  margin: 0px; 
+  z-index: 1;
+}
+.header-nav li:hover .sub-menu {
+  display: block;
+}
+.header-nav .sub-menu li {
+  border-right: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+  background-color: #ffffff;
+  padding: 5px 20px;
+}
+.header-nav .sub-menu li:last-of-type {
+  border-bottom: 1px solid #e1e1e1;
+}
+.header-nav .sub-menu li:hover:last-of-type {
+  border-bottom: 1px solid #a7c81f;
+}
+.header-nav li:hover {
+  border-top: 1px solid #00aef2;
+  border-bottom: 1px solid #a7c81f;
+}
+
+/*меню услуг*/
+.services-menu h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 25px;
+}
+.services-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: auto;
+  margin-left: auto;
+}
+.services-box .service {
+  width: 180px;
+  margin-bottom: 50px;
+}
+.services-box .service .service_logo {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #e1e1e1;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+.services-box .service .service_delete {
+  background: url("../img/delete.png") no-repeat 50% 50%;
+}
+.services-box .service .service_white {
+  background: url("../img/white.png") no-repeat 50% 50%;
+}
+.services-box .service .service_lasern {
+  background: url("../img/lasern.png") no-repeat 50% 50%;
+}
+.services-box .service .service_le4enie {
+  background: url("../img/le4enie.png") no-repeat 50% 50%;
+}
+.services-box .service .service_clear {
+  background: url("../img/clear.png") no-repeat 50% 50%;
+}
+.services-box .service .service_discount {
+  background: url("../img/discount.png") no-repeat 50% 50%;
+}
+.services-box .service .service_prikus {
+  background: url("../img/prikus.png") no-repeat 50% 50%;
+}
+.services-box .service .service_komponiry {
+  background: url("../img/komponiry.png") no-repeat 50% 50%;
+}
+.services-box .service .service_det {
+  background: url("../img/det.png") no-repeat 50% 50%;
+}
+.services-box .service .service_3d {
+  background: url("../img/3d.png") no-repeat 50% 50%;
+}
+.services-box .service .service_plazmo {
+  background: url("../img/plazmo.png") no-repeat 50% 50%;
+}
+.services-box .service .service_narkoz {
+  background: url("../img/narkoz.png") no-repeat 50% 50%;
+}
+.services-box .service .service_implantant {
+  background: url("../img/implantant.png") no-repeat 50% 50%;
+}
+.services-box .service .service_micro {
+  background: url("../img/micro.png") no-repeat 50% 50%;
+}
+.services-box .service .service_protez {
+  background: url("../img/protez.png") no-repeat 50% 50%;
+}
+.services-box .service:hover .service_logo {
+  border-color: #00aef2;
+}
+.services-box .service:hover .service_name {
+  color: #00aef2;
+}
+.services-box .service:hover .service_description {
+  color: #a7c81f;
+}
+.services-box .service .service_name {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+.services-box .service .service_description {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 12px;
+}
+
+/*Технологии*/
+.technology-container {
+  background-image: linear-gradient(to right bottom, #00aef2 30%, #a7c81f 100%);
+  padding-top: 25px;
+  margin-bottom: 25px;
+}
+.technology-container h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0px 0px 2px #444;
+}
+.technology-container h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #ffffff;
+  margin: 10px auto 5px;
+  box-shadow: 0px 0px 2px 0px #444;
+}
+.technology {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+}
+.technology_item {
+  background-color: #ffffff;
+  flex-basis: 445px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px #444;
+}
+.technology_item:last-of-type {
+  flex-grow: 1;
+}
+.technology_item img {
+  float: left;
+  margin-right: 15px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-right: 2px solid #e1e1e1;
+}
+.technology_item h3 {
+  font-size: 20px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.technology_item p {
+  font-size: 14px;
+}
+.technology_item span {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+}
+.technology_item span a {
+  color: black;
+}
+.technology_item span:hover a {
+  color: #00aef2;
+  text-decoration: none;
+}
+
+/*блок отзывов и новостей*/
+/*отзывы*/
+.reviews {
+  border: 2px solid #e1e1e1;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+.reviews h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.reviews h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #a7c81f;
+  margin: 10px auto 0px;
+}
+.review {
+  padding: 10px;
+  padding-left: 65px;
+  position: relative;
+  font-size: 12px;
+  font-style: italic;
+}
+.review img {
+  width: 50px;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  border: 1px solid #e1e1e1;
+}
+.review time {
+  display: block;
+  margin-bottom: 5px;
+}
+.review h3 {
+  font-size: 14px;
+  font-style: normal;
+  color: #a7c81f;
+  text-transform: uppercase;
+}
+.review .review-text {
+  max-height: 145px;
+  overflow: hidden;
+}
+.review p {
+  margin-bottom: 0px;
+}
+.reviews span {
+  display: block;
+  font-size: 11px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding: 3px 20px;
+  background-color: #e1e1e1;
+  width: 100%;
+  text-transform: uppercase;
+}
+.reviews span a {
+  color: black;
+}
+.reviews span a:hover {
+  text-decoration: none;
+  color: #a7c81f;
+}
+
+/*новости*/
+.news {
+  padding: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.news-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.news h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.news h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #00aef2;
+  margin: 10px auto 0px;
+}
+.news .new {
+  width: 300px;
+  padding: 10px;
+  padding-left: 115px;
+  position: relative;
+  font-size: 12px;
+}
+.news .new img {
+  width: 100px;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}
+.news .new time {
+  display: block;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.news .new h3 {
+  font-size: 14px;
+  font-style: normal;
+  color: #00aef2;
+  text-transform: uppercase;
+}
+.news .new .new-text {
+  max-height: 145px;
+  overflow: hidden;
+}
+.news .new p {
+  margin-bottom: 0px;
+}
+.news span {
+  display: block;
+  position: absolute;
+  text-align: right;
+  right: 0px;
+  bottom: 0px;
+  font-size: 11px;
+  padding: 3px 20px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.news span a {
+  color: black;
+}
+.news span a:hover {
+  text-decoration: none;
+  color: #00aef2;
+}
+
+/* блок с кратким описанием*/
+.abstract-container {
+  background-image: linear-gradient(to right bottom, #00aef2 30%, #a7c81f 100%);
+  margin-bottom: 25px;
+}
+.abstract {
+  color: #ffffff;
+  text-shadow: 0px 0px 2px #444;
+  padding: 20px;
+  font-size: 16px;
+}
+.abstract h2 {
+  text-transform: uppercase;
+}
+
+/* блок с результатом работы*/
+.result {
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+}
+.result ul {
+  list-style: none;
+  padding: 0px 20px;
+  margin: 0px;
+}
+.result li div {
+  color: #00aef2;
+}
+.result li div::before {
+  content: ">";
+  color: #00aef2;
+  margin-left: -15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.result p {
+  margin: 0px;
+}
+.result img {
+  width: 100%;
+}
+.result_img {
+  align-self: center;
+}
+
+/*блок "почему мы?"*/
+.why_we {
+  padding: 20px;
+}
+.why_we h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: gray;
+}
+.why_we_img {
+  display: block;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.why_we_article {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+.why_we_reason {
+  text-align: center;
+  font-size: 14px;
+}
+
+/*лицензии*/
+.licenses {
+  padding: 20px;
+}
+.licenses h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: gray;
+}
+.licenses img {
+  width: 100%;
+}
+
+/*услуги*/
+.services {
+  padding: 20px;
+  background-color: #e1e1e1;
+  font-size: 12px;
+}
+.services_promo {
+  font-size: 16px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.services a {
+  color: #000000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.services a:hover {
+  text-decoration: none;
+  color: #00aef2;
+}
+.services p {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* стили для футера */
+footer, footer a {
+  font-size: 16px;
+  color: #ffffff;
+} 
+footer a:hover {
+  color: #00aef2;
+  text-decoration: none;
+}
+a {
+  display: block;
+}
+.sitemap {
+  background-color: #565656;
+  padding: 20px;
+}
+.sitemap .btn {
+  color: #ffffff;
+}
+.sitemap .btn:hover + div.container {
+  /* display: none; */
+}
+.sitemap-block-name-2 {
+  font-size: 14px;
+  padding-left: 15px;
+}
+.sitemap-block-name-3 {
+  font-size: 14px;
+  color: #808080;
+  padding-left: 25px;
+}
+.footer-info {
+  background-color: #474747;
+  color: #808080;
+  font-size: 14px;
+  padding: 20px;
+}
+.footer-info a {
+  color: #00aef2;
+}
+.footer-info div[class^="col"] p {
+  margin-bottom: 0px;
+}
+.footer-info p:first-of-type {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.why_we h2::after,
+.licenses h2::after,
+.services_promo::after,
+.services-menu h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #00aef2;
+  margin: 10px auto 35px;
+}
