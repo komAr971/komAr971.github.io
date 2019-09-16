@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("/fonts/Bahnschrift_Regular.tiff");
+  font-weight: normal;
+
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("/fonts/Bahnschrift_Light.tiff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("/fonts/Bahnschrift_SemiBold.tiff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("/fonts/Bahnschrift_SemiBold_SemiCondensed.tiff");
+  font-weight: bold;
+  font-stretch: semi-condensed;
+
+}
+
+.container_main {
+	margin-right: auto;
+	margin-left: auto;
+	width: 960px;
+}
+/*
+.logo_header {
+	width: 100%;
+	cursor: pointer;
+}*/
+
+.logo{
+	background-image: url("/img/logo.png");
+	background-size: auto 100%;
+  	height: 102px;
+  	background-repeat: no-repeat;
+    margin-left: -15px;
+    margin-right: 4px;
+}
+
+.title {
+	font-family: Bahnschrift;
+    padding-right: 0;
+    line-height: 100%;
+    text-align: center;    
+    line-height: 93%;
+}
+
+.logo_first_line{
+    font-weight: bold;
+    font-stretch: semi-condensed;
+    letter-spacing: -1px;
+    font-size: 1.213em;
+    margin-top: 24px;
+    color: #00aef2; /*blue*/
+}
+
+.logo_second_line{
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 0.123em;
+    color: #00aef2; /*blue*/
+}
+
+.logo_third_line {
+	font-weight: bold;	
+	font-size: 0.7em;
+    letter-spacing: -1;
+    color: #a7c81f; /*green*/
+}
+
+.contact_icon{
+	vertical-align: middle;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 0px;
+    margin-bottom: 5px;
+    /*margin-top: 10px; /*убрать,если 2 ряда*/
+}
+
+.contact_icon img {
+	width: 100%;
+}
+
+.header_container {
+	padding-top: 24px;
+}
+
+.call_button {
+	border-radius: 28px 0px;
+	background: #a7c81f;
+    width: 100%;/*
+    height: 43px;*/
+    border: 0px;
+    position: relative;
+    bottom: 2em;
+    z-index: -1;
+}
+
+.call_button p { 
+	font-family: Bahnschrift Light;
+	font-size: 0.84em;
+	color: white;
+	margin-bottom: 0px;
+	padding-top: 2.4em;
+	padding-bottom: 0em;
+}
+
+.call_icon {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.appoint_button {
+	border-radius: 28px 0px;
+	background: #00aef2;
+    width: 100%;/*
+    height: 43px;*/
+    border: 0px;
+    box-shadow: 0px 4px 9px -5px black;
+}
+
+.appoint_button p { 
+	font-family: Bahnschrift Regular;
+	font-size: 0.92em;
+	color: white;
+	margin-bottom: 0px;
+	padding-top: 0.82em;
+	padding-bottom: 0.82em;
+}
+
+.header p {
+	margin-bottom: 0px;
+}
+
+.header_phone {
+	font-family: Bahnschrift SemiBold;
+	text-decoration: underline;	
+    line-height: 1;
+    font-size: 16px
+
+}
+
+.header_address {
+	font-family: Bahnschrift SemiCondensed;
+	letter-spacing: -0.1px;
+    /*line-height: 1;	*/
+    font-size: 13px
+}
+
+.header_time {
+	font-family: Bahnschrift SemiCondensed;
+	text-align: center;
+    line-height: 1;	
+    font-size: 14px
+}
+
+.time_container{
+	padding-top: 0.75em;
+	box-shadow: 
+		inset 0px 2px 0px 0px #00aef2, /*blue*/
+		inset 0px 5px 0px 0px white, 
+		inset 0px 7px 0px 0px #a7c81f; /*green*/
+}
+
+/*зарпещаем стрелки в вып списках*/
+.dropdown-toggle::after{
+	display: none;
+}
+
+/*ограничение высоты карусели на главной*/
+.carousel-inner > .carousel-item{
+	max-height: 450px;
+}
+
+/*выравнивание обрезанных изображений в карусели*/
+.carousel-inner > .carousel-item > img{
+	object-fit: cover;
+	margin-top: -310px;
+}
+
+.carousel{
+	margin-bottom: 25px;
+}
