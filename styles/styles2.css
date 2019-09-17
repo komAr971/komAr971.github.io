@@ -578,6 +578,134 @@ a {
   color: #ffffff;
 }
 
+.contacts {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.contacts .background {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  animation: background 3s infinite linear;
+  z-index: 11;
+}
+.contacts::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background-color: #00aef2;
+  animation: puf-puf 5s infinite ease;
+}
+.contacts::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background-color: #a7c81f;
+  animation: puf-puf 5s infinite ease;
+  animation-delay: 0.2s;
+}
+.contacts a {
+  display: block;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 2px 0px black;
+  z-index: 12;
+  opacity: 0;
+}
+.contacts a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -190px;
+  width: 170px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.contacts .contacts-vk {
+  background: #1976d2 url(../img/contacts-vk.png) no-repeat 50% 50%;
+  background-size: 100%;
+  animation: swap 21s infinite steps(1, start);
+}
+.contacts .contacts-call-back {
+  background: #00aef2 url("../img/contacts-call-back.png") no-repeat 50% 50%;
+  background-size: 50%;
+  animation: swap 21s infinite steps(1, start);
+  animation-delay: 7s;
+}
+.contacts .contacts-location {
+  background: #00aef2 url("../img/contacts-location.png") no-repeat 50% 50%;
+  background-size: 50%;
+  animation: swap 21s infinite steps(1, start);
+  animation-delay: 14s;
+}
+@keyframes background {
+  from {
+    transform: translate(0px, -5px);
+    background-color: #00aef2;
+  }
+  25% {
+    transform: translate(5px, 0px);
+  }
+  50% {
+    transform: translate(0px, 5px);
+    background-color: #a7c81f;
+  }
+  75% {
+    transform: translate(-5px, 0px);
+  }
+  to {
+    transform: translate(0px, -5px);
+    background-color: #00aef2;
+  }
+}
+@keyframes puf-puf {
+  from{
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes swap{
+  from {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+
+}
+
 .why_we h2::after,
 .licenses h2::after,
 .services_promo::after,
