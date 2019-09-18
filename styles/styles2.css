@@ -630,32 +630,70 @@ a {
   box-shadow: 0 0 2px 0px black;
   z-index: 12;
   opacity: 0;
+  animation: swap 21s infinite steps(1, start);
 }
 .contacts a::before {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: -190px;
   width: 170px;
   height: 60px;
   background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  line-height: 20px;
+  color: #ffffff;
+  border-radius:  2px;
+  animation: swap-text 21s infinite linear;
+  transform-origin: 250px 0;
+}
+.contacts a::after {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 11px solid rgba(0, 0, 0, 0.5);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right: none;
+  animation: swap-text 21s infinite linear;
+  transform-origin: 80px -18px;
 }
 .contacts .contacts-vk {
   background: #1976d2 url(../img/contacts-vk.png) no-repeat 50% 50%;
   background-size: 100%;
-  animation: swap 21s infinite steps(1, start);
 }
 .contacts .contacts-call-back {
   background: #00aef2 url("../img/contacts-call-back.png") no-repeat 50% 50%;
   background-size: 50%;
-  animation: swap 21s infinite steps(1, start);
   animation-delay: 7s;
 }
 .contacts .contacts-location {
   background: #00aef2 url("../img/contacts-location.png") no-repeat 50% 50%;
   background-size: 50%;
-  animation: swap 21s infinite steps(1, start);
+  animation-delay: 14s;
+}
+.contacts .contacts-vk::before {
+  content: "Напишите нам через vkontakte";
+}
+.contacts .contacts-call-back::before {
+  content: "Оставьте заявку и мы вам перезвоним";
+  animation-delay: 7s;
+}
+.contacts .contacts-location::before {
+  content: "Ждем вас в гости. Время и место:";
+  animation-delay: 14s;
+}
+.contacts .contacts-call-back::after {
+  animation-delay: 7s;
+}
+.contacts .contacts-location::after {
   animation-delay: 14s;
 }
 @keyframes background {
@@ -703,8 +741,30 @@ a {
   to {
     opacity: 0;
   }
-
 }
+@keyframes swap-text {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  2% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  33% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  34% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+}
+
 
 .why_we h2::after,
 .licenses h2::after,
