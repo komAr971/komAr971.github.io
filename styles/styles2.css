@@ -238,7 +238,12 @@
   position: relative;
   padding-right: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 3px 0px #444;
+  box-shadow: 0px 0px 3px 0px #999;
+  transition: all 0.3s ease-out;
+}
+.technology_item:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 10px 3px rgba(0, 174, 242, 0.2);
 }
 .technology_item:last-of-type {
   flex-grow: 1;
@@ -422,13 +427,6 @@
   position: relative;
   text-transform: uppercase;
 }
-/*.result li div::before {
-  content: ">";
-  color: #00aef2;
-  margin-left: -15px;
-  font-weight: bold;
-  font-size: 16px;
-}*/
 .result li div::before {
   content: "";
   position: absolute;
@@ -480,6 +478,12 @@
 }
 .licenses img {
   width: 100%;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+.licenses img:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 /*услуги*/
@@ -525,11 +529,34 @@ a {
   background-color: #565656;
   padding: 20px;
 }
-.sitemap .btn {
-  color: #ffffff;
+.sitemap input[type="checkbox"] {
+  display: none;
 }
-.sitemap .btn:hover + div.container {
-  /* display: none; */
+.sitemap input[type="checkbox"]:checked ~ .sitemap-box {
+  display: none;
+}
+.sitemap label {
+  position: relative;
+  padding-left: 15px;
+}
+.sitemap label:hover {
+  opacity: 0.8;
+}
+.sitemap label::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/sitemap.png");
+  background-size: cover;
+  position: absolute;
+  top: 3px;
+  left: -5px;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+.sitemap input[type="checkbox"]:checked ~ label::before {
+  transform: rotate(0deg);
 }
 .sitemap-block-name-2 {
   font-size: 14px;
