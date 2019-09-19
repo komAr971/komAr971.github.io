@@ -3,6 +3,21 @@
   max-width: 960px;
 }
 
+/*заголовки блоков*/
+.section-title {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: gray;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #00aef2;
+  margin: 10px auto 35px;
+}
+
 /* меню под шапкой*/
 .nav-container {
   border-top: 1px solid #e1e1e1;
@@ -39,32 +54,32 @@
 }
 .header-nav span {
   margin-right: -1px;
-  text-shadow: 0px 0px 1px #444;
+  text-shadow: 1px 1px 1px #888;
   font-weight: bold;
 }
 .header-nav span:last-of-type {
-  margin-right: 2px;
+  margin-right: 3px;
 }
 .header-nav span:nth-of-type(1) {
-  color: red;
+  color: #e00000;
 }
 .header-nav span:nth-of-type(2) {
-  color: #ffff00;
+  color: #f0e000;
 }
 .header-nav span:nth-of-type(3) {
-  color: #00ff00;
+  color: #00e000;
 }
 .header-nav span:nth-of-type(4) {
-  color: #00ffff;
+  color: #00e0f0;
 }
 .header-nav span:nth-of-type(5) {
-  color: #0000ff;
+  color: #0000f0;
 }
 .header-nav span:nth-of-type(6) {
-  color: #ff00ff;
+  color: #e000f0;
 }
 .header-nav span:nth-of-type(7) {
-  color: red;
+  color: #e00000;
 }
 .header-nav li:hover a {
   text-decoration: none;
@@ -74,7 +89,7 @@
   width: 180px;
   position: absolute;
   left: -2px;
-  top: 15px;
+  top: 20px;
   list-style: none;
   padding: 20px 0px 5px;
   margin: 0px; 
@@ -101,13 +116,6 @@
 }
 
 /*меню услуг*/
-.services-menu h2 {
-  text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: gray;
-  margin-bottom: 25px;
-}
 .services-box {
   display: flex;
   flex-wrap: wrap;
@@ -122,11 +130,13 @@
 .services-box .service .service_logo {
   width: 80px;
   height: 80px;
-  border: 5px solid #e1e1e1;
+  border: 5px solid #898989;
   border-radius: 50%;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+  transition: all 0.3s ease-out;
 }
 .services-box .service .service_delete {
   background: url("../img/delete.png") no-repeat 50% 50%;
@@ -175,12 +185,10 @@
 }
 .services-box .service:hover .service_logo {
   border-color: #00aef2;
-}
-.services-box .service:hover .service_name {
-  color: #00aef2;
-}
-.services-box .service:hover .service_description {
-  color: #a7c81f;
+  opacity: 1;
+  width: 83px;
+  height: 83px;
+  margin-bottom: 17px;
 }
 .services-box .service .service_name {
   display: block;
@@ -188,37 +196,32 @@
   margin-left: auto;
   text-align: center;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 16px;
   letter-spacing: -1px;
+  transition: all 0.3s ease-out;
+}
+.services-box .service:hover .service_name {
+  color: #00aef2;
+  text-shadow: 1px 1px 1px #e1e1e1;
 }
 .services-box .service .service_description {
   display: block;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
+  transition: all 0.3s ease-out;
+}
+.services-box .service:hover .service_description {
 }
 
 /*Технологии*/
 .technology-container {
-  background-image: linear-gradient(to right bottom, #00aef2 30%, #a7c81f 100%);
+  background-image: linear-gradient(to right bottom, #00aef2 1%, rgba(0, 174, 242, 0.2) 20%, rgba(0, 174, 242, 0.2) 50%, rgba(167, 200, 31, 0.2) 80%, rgba(167, 200, 31, 1) 100%);
   padding-top: 25px;
   margin-bottom: 25px;
-}
-.technology-container h2 {
-  text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 0px 0px 2px #444;
-}
-.technology-container h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  border-bottom: 3px solid #ffffff;
-  margin: 10px auto 5px;
-  box-shadow: 0px 0px 2px 0px #444;
 }
 .technology {
   display: flex;
@@ -279,17 +282,8 @@
   padding: 15px;
   margin-bottom: 25px;
 }
-.reviews h2 {
-  font-size: 18px;
-  text-transform: uppercase;
-  text-align: center;
-}
 .reviews h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  border-bottom: 3px solid #a7c81f;
-  margin: 10px auto 0px;
+  border-bottom-color: #a7c81f;
 }
 .review {
   padding: 10px;
@@ -352,18 +346,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.news h2 {
-  font-size: 18px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.news h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  border-bottom: 3px solid #00aef2;
-  margin: 10px auto 0px;
-}
 .news .new {
   width: 300px;
   padding: 10px;
@@ -416,17 +398,12 @@
 
 /* блок с кратким описанием*/
 .abstract-container {
-  background-image: linear-gradient(to right bottom, #00aef2 30%, #a7c81f 100%);
+  background-image: linear-gradient(to right bottom, #00aef2 1%, rgba(0, 174, 242, 0.2) 20%, rgba(0, 174, 242, 0.2) 50%, rgba(167, 200, 31, 0.2) 80%, rgba(167, 200, 31, 1) 100%);
   margin-bottom: 25px;
 }
 .abstract {
-  color: #ffffff;
-  text-shadow: 0px 0px 2px #444;
   padding: 20px;
   font-size: 16px;
-}
-.abstract h2 {
-  text-transform: uppercase;
 }
 
 /* блок с результатом работы*/
@@ -442,13 +419,27 @@
 }
 .result li div {
   color: #00aef2;
+  position: relative;
+  text-transform: uppercase;
 }
-.result li div::before {
+/*.result li div::before {
   content: ">";
   color: #00aef2;
   margin-left: -15px;
   font-weight: bold;
   font-size: 16px;
+}*/
+.result li div::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 6px solid #00aef2;
+  border-right: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
 }
 .result p {
   margin: 0px;
@@ -463,12 +454,6 @@
 /*блок "почему мы?"*/
 .why_we {
   padding: 20px;
-}
-.why_we h2 {
-  text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: gray;
 }
 .why_we_img {
   display: block;
@@ -492,12 +477,6 @@
 /*лицензии*/
 .licenses {
   padding: 20px;
-}
-.licenses h2 {
-  text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: gray;
 }
 .licenses img {
   width: 100%;
@@ -763,16 +742,4 @@ a {
     opacity: 0;
     transform: rotate(90deg);
   }
-}
-
-
-.why_we h2::after,
-.licenses h2::after,
-.services_promo::after,
-.services-menu h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  border-bottom: 3px solid #00aef2;
-  margin: 10px auto 35px;
 }
